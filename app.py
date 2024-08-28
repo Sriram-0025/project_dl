@@ -30,16 +30,23 @@ st.title('Dermatology Classification')
 st.write("Enter the feature values for prediction:")
 
 # Inputs
-thinning = st.number_input('Thinning of the suprapapillary epidermis', min_value=0, max_value=3)
-clubbing = st.number_input('Clubbing of the rete ridges', min_value=0, max_value=3)
-spongiosis = st.number_input('Spongiosis', min_value=0, max_value=3)
-fibrosis = st.number_input('Fibrosis of the papillary dermis', min_value=0, max_value=3)
-koebner = st.number_input('Koebner phenomenon', min_value=0, max_value=3)
-elongation = st.number_input('Elongation of the rete ridges', min_value=0, max_value=3)
-exocytosis = st.number_input('Exocytosis', min_value=0, max_value=3)
-melanin = st.number_input('Melanin incontinence', min_value=0, max_value=3)
-pnl_infiltrate = st.number_input('Pnl infiltrate', min_value=0, max_value=3)
-saw_tooth = st.number_input('Saw-tooth appearance of retes', min_value=0, max_value=3)
+import streamlit as st
+
+# Define options
+options = [0, 1, 2, 3]
+
+# Multiple selection for each feature
+thinning = st.multiselect('Thinning of the suprapapillary epidermis', options, default=[0])
+clubbing = st.multiselect('Clubbing of the rete ridges', options, default=[0])
+spongiosis = st.multiselect('Spongiosis', options, default=[0])
+fibrosis = st.multiselect('Fibrosis of the papillary dermis', options, default=[0])
+koebner = st.multiselect('Koebner phenomenon', options, default=[0])
+elongation = st.multiselect('Elongation of the rete ridges', options, default=[0])
+exocytosis = st.multiselect('Exocytosis', options, default=[0])
+melanin = st.multiselect('Melanin incontinence', options, default=[0])
+pnl_infiltrate = st.multiselect('Pnl infiltrate', options, default=[0])
+saw_tooth = st.multiselect('Saw-tooth appearance of retes', options, default=[0])
+
 
 # Collect input data
 new_input_data = np.array([[thinning, clubbing, spongiosis, fibrosis, koebner,
