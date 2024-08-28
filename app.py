@@ -35,17 +35,21 @@ import streamlit as st
 # Define options
 options = [0, 1, 2, 3]
 
-# Multiple selection for each feature
-thinning = st.multiselect('Thinning of the suprapapillary epidermis', options, default=[0])
-clubbing = st.multiselect('Clubbing of the rete ridges', options, default=[0])
-spongiosis = st.multiselect('Spongiosis', options, default=[0])
-fibrosis = st.multiselect('Fibrosis of the papillary dermis', options, default=[0])
-koebner = st.multiselect('Koebner phenomenon', options, default=[0])
-elongation = st.multiselect('Elongation of the rete ridges', options, default=[0])
-exocytosis = st.multiselect('Exocytosis', options, default=[0])
-melanin = st.multiselect('Melanin incontinence', options, default=[0])
-pnl_infiltrate = st.multiselect('Pnl infiltrate', options, default=[0])
-saw_tooth = st.multiselect('Saw-tooth appearance of retes', options, default=[0])
+import streamlit as st
+
+
+# Dropdown menu for each feature
+thinning = st.selectbox('Thinning of the suprapapillary epidermis', options)
+clubbing = st.selectbox('Clubbing of the rete ridges', options)
+spongiosis = st.selectbox('Spongiosis', options)
+fibrosis = st.selectbox('Fibrosis of the papillary dermis', options)
+koebner = st.selectbox('Koebner phenomenon', options)
+elongation = st.selectbox('Elongation of the rete ridges', options)
+exocytosis = st.selectbox('Exocytosis', options)
+melanin = st.selectbox('Melanin incontinence', options)
+pnl_infiltrate = st.selectbox('Pnl infiltrate', options)
+saw_tooth = st.selectbox('Saw-tooth appearance of retes', options)
+
 
 
 # Collect input data
