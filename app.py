@@ -7,11 +7,11 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler
 
 # Load the scaler
-scaler_path = '/content/scaler.pkl'
+scaler_path = 'scaler.pkl'
 scaler = joblib.load(scaler_path)
 
 # Load the model
-model_path = '/content/model.keras'
+model_path = 'model.keras'
 model = load_model(model_path)
 
 # Define class labels
